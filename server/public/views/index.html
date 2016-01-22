@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Presidential Info</title>
+
+    <link href="vendor/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="assets/styles/style.css" type="text/css" rel="stylesheet" />
+
+    <script src="vendor/angular/angular.min.js" type="text/javascript"></script>
+    <script src="vendor/angular-route/angular-route.min.js" type="text/javascript"></script>
+    <script src="assets/scripts/client.min.js" type="text/javascript"></script>
+</head>
+<body ng-controller="mainController">
+
+<div ng-include src="'views/header.html'"></div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-0 col-md-1"></div>
+        <div class="col-xs-12 col-md-3">
+            <a href="#/clinton"><button class="btn btn-lg btn-primary btn-block" ng-click="click()">Hillary Clinton</button></a>
+        </div>
+        <div class="col-xs-12 col-md-3">
+            <a href="#/sanders"><button class="btn btn-lg btn-primary btn-block" ng-click="click()">Bernie Sanders</button></a>
+        </div>
+        <div class="col-xs-12 col-md-3">
+            <a href="#/omalley"><button class="btn btn-lg btn-primary btn-block" ng-click="click()">Martin O'Malley</button></a>
+        </div>
+        <div class="col-xs-0 col-md-1"></div>
+    </div>
+
+    <div ng-view></div>
+
+</div>
+<div class="spacer"></div>
+<div ng-include src="'views/footer.html'"></div>
+
+</body>
+</html>
